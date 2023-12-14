@@ -135,7 +135,7 @@ class App extends Component {
           </div>
         </div>
         <div className="content-holder">
-          {!isTrue && (
+          {isTrue && (
             <ul className="inner-holder">
               {newHistoryList.map(eachObject => (
                 <li key={eachObject.id} className="items-holder">
@@ -155,7 +155,7 @@ class App extends Component {
                     className="delete-button"
                     data-testid="delete"
                     type="button"
-                    onClick={() => this.FillFunction(eachObject.id)}
+                    onClick={this.FillFunction(eachObject.id)}
                   >
                     <img
                       className="delete-icon"
